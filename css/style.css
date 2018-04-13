@@ -1,0 +1,364 @@
+html,body{
+	height: 100%;
+    overflow: hidden;
+}
+img{
+	/*width: 100%;*/
+	height: auto;
+}
+.page{
+	width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-width: 321px;
+    background: url(../images/bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.page0{
+    background: url(../images/pg0_bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.pagecj{
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-width: 321px;
+    overflow: hidden;
+    z-index: 0;
+}
+.hide{
+    display: none;
+}
+
+.page0 .pg0_01{
+    width: 4.1rem;
+    position: absolute;
+    left: 1.15rem;
+    bottom: 0.8rem;
+}
+.page1 .content{
+    width: 5.41rem;
+    position: absolute;
+    left:  0.495rem;
+    top: 1rem;
+    background: url(../images/pg0_02.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.page1 .pg1_draw{
+    width: 0.36rem;
+    top: 1.7rem;
+    left: 2.4rem;
+    position: absolute;
+}
+.page1 .pg1_01{
+    width: 1.49rem;
+    right: 0.4rem;
+    bottom: 0rem;
+    position: absolute;
+}
+.page1 .pg1_02{
+    width: 1.53rem;
+    left: 1.9rem;
+    bottom: 0rem;
+    position: absolute;
+}
+.page1 .pg1_03{
+    width: 1.71rem;
+    left: 0rem;
+    bottom: 0rem;
+    position: absolute;
+}
+.page1 .c1{
+    right: 1.9rem;
+}
+.page1 .c2{
+    left: 1.6rem;
+}
+.page1 .pg1_next{
+    width: 2.14rem;
+    left: 2.13rem;
+    bottom: 0.54rem;
+    position: absolute;
+}
+.page1 .pg1_04{
+    width: 1.85rem;
+    left: 2.27rem;
+    bottom: 1.2rem;
+    position: absolute;
+}
+.page1 .pg1_05{
+    width: 1.85rem;
+    left: 2.27rem;
+    bottom: 0.4rem;
+    position: absolute;
+}
+.page1 .btn_next{
+    display: none;
+}
+.page2 .sfw{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.page2 .content{
+    width: 5.41rem;
+    position: absolute;
+    left:  0.495rem;
+    top: 0.9rem;
+    background: url(../images/upload.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.page2 .content  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.fudong{
+  -webkit-animation:fudong 1s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes fudong{
+    from { -webkit-transform: translateY(50%); }
+    to{-webkit-transform: translateY(-50%);}
+}
+.fudong1{
+  -webkit-animation:fudong1 1s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes fudong1{
+    from { -webkit-transform: translateY(5px); }
+    to{-webkit-transform: translateY(-5px);}
+}
+.canvas{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+input {
+    margin: 0;
+    outline: none;
+}
+.pagecj .cjbg{
+    font-size: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/pgcj_01.png);
+    background-position:top left;
+    background-repeat:no-repeat;
+    -webkit-background-size:contain;
+    background-size: contain;
+    z-index: 9;
+    overflow: hidden;
+}
+.pagecj .pagecj_bg{
+    width: 100%;
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    z-index: 9;
+    overflow: hidden;
+    /*background: url(../images/page1_bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;*/
+}
+.pagecj .saveTips{
+    width: 100%;
+    position: absolute;
+    bottom: 1.3rem;
+    left: 0rem;
+    z-index: 9;
+}
+.pagecj .pagecj_tips{
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+}
+/*.pagecj .icon_btn1{
+    width: 0.86rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 2.77rem;
+    z-index: 10;
+}
+.pagecj .icon_btn2{
+    width: 0.64rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 0.33rem;
+    z-index: 10;
+}*/
+.pagecj .icon_btn1{
+    width: 1.83rem;
+    /*left: 2.26rem;*/
+    right: 0.33rem;
+    bottom: 0.4rem;
+    position: absolute;
+    z-index: 10;
+}
+.pagecj .icon_btn2{
+    width: 1.83rem;
+    /*left: 2.26rem;*/
+    left: 0.33rem;
+    bottom: 0.4rem;
+    position: absolute;
+    z-index: 10;
+}
+.page3 .pg3_sfw{
+    width: 100%;
+    height: 100%;
+    background: url(../images/pg3_011.png) no-repeat top left;
+    -webkit-background-size:contain;
+    background-size: contain;
+    z-index: 1;
+}
+
+.page3 .pg3_01{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.page3 .content{
+    text-align: center;
+    width: 4.7rem;
+    /*height: auto;*/
+    position: absolute;
+    left:  0.85rem;
+    top: 2.5rem;
+    padding: 2px;
+    background-color: white;
+    box-sizing: border-box;
+    /*background: url(../images/pg3_02.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;*/
+    z-index: 2;
+}
+.page3 .result{
+    /*width: 4.66rem;*/
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+.page3 .pgcj_hand{
+    width: 1.43rem;
+    position: absolute;
+    /*bottom: 1.8rem;*/
+    left: 2.485rem;
+    z-index: 1;
+}
+.page3 .pg3_save{
+    width: 5rem;
+    position: absolute;
+    bottom: 0.82rem;
+    left: 0.76rem;
+}
+
+.close{
+    width: 36px;
+    z-index: 9999;
+    /*right: 40.5%;*/
+    top: 21%;
+    position: absolute;
+}
+.page .reword .close{
+    width: 36px;
+    position: absolute;
+    right: 265px;
+    top: 130.20px;
+}
+.page .step2 .close{
+    width: 36px;
+    position: absolute;
+    right: 310px;
+    top: 130.20px;
+}
+.page .step3 .close{
+    width: 36px;
+    right: 26%;
+    z-index: 99;
+    top: 125px;
+    position: absolute;
+}
+
+.page .linjiang{
+    width: 169.27px;
+    position: absolute;
+    top:382px;
+    left: 421.87px;
+    z-index: 99;
+}
+.page .reword_pg{
+	width: 504.16px;
+	height: auto;
+	top: 123.95px;
+    left: 247.91px;
+	position: absolute;
+}
+.page .mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 99999;
+	display:none;
+	top:0%;
+    /*text-align: center;*/
+}
+.page .step2bg{
+    width: 407.29px;
+    position: absolute;
+    top: 123.95px;
+    left: 296.35px;
+}
+.page .step2 .yes{
+    width: 177.6px;
+    position: absolute;
+    top: 176.0px;
+    left: 400.52px;
+}
+.page .step2 .no{
+    width: 177.6px;
+    position: absolute;
+    top: 280.2px;
+    left: 400.52px;
+}
+
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #cccccc;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    text-align: left;
+    /*text-indent:25px*/
+}
+input::-moz-placeholder { /* Mozilla  browsers */
+    color: #cccccc;
+    font-family: "微软雅黑";
+    text-align: left;
+    font-size: 20px;
+    /*text-indent:25px*/
+}
+input::-ms-input-placeholder { /* Internet  browsers */
+    color: #cccccc;
+    font-family: "微软雅黑";
+    text-align: left;
+    font-size: 20px;
+    /*text-indent:25px*/
+}

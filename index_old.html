@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>制作拜年GIF</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/select.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animation.css"/>
+    <!--优先加载jquery -->
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.exif.js"></script>
+    <script type="text/javascript" src="./js/cj.js"></script>
+
+    <script type="text/javascript">
+        addEventListener('load', function() {
+            var _wid=$(".page").width();
+            document.documentElement.style.fontSize = 100 * _wid / 640 + 'px'
+            setTimeout(function(){
+                document.documentElement.style.fontSize = 100 * _wid / 640 + 'px'
+                window.unit = 100 * _wid / 640;
+                var e = document.createEvent('Event');
+                e.initEvent('adjustReady', true, true);
+                window.dispatchEvent(e);
+            }, 480);
+        })
+        addEventListener('orientationchange', function() {
+            var _wid=$(".page").width();
+            setTimeout(function(){
+                document.documentElement.style.fontSize = 100 * _wid / 640 + 'px'
+            }, 480)
+        });
+    </script>
+    <style>
+        #audio_btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 200;
+        display: none;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        }
+        .off {
+        -webkit-animation:rotating 1.2s linear infinite;
+        }
+        .play_yinfu {
+        background-image: url(images/music.gif);
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        }
+        .rotate
+        {
+            position:absolute;
+            left:10px;top:10px;
+            width:30px;height:30px;
+            background-size:100% 100%;
+            background-image:url(images/music_off.png);
+            
+        }
+        @-webkit-keyframes rotating
+        {
+            from{
+                -webkit-transform:rotate(0deg);
+            }
+            to{
+                -webkit-transform:rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="audio_btn" class="video_exist play_yinfu" style="opacity: 1; display: block;">
+        <div id="yinfu" class="rotate off"></div>
+        <audio loop="" src="bgmusic.mp3" id="media" autoplay="autoplay" preload="auto"></audio>
+    </div> -->
+<!-- 第一幕 开场-->
+<!-- <div class="page"> -->
+    <div class="page page0">
+        <img src="images/pg0_01.png" alt="pg0_01" class="pg0_01 baidong">
+    </div>
+    <div class="page page1 hide">
+        <div class="content">
+            <img src="images/pg1_draw.png" class="pg1_draw fudong">
+            <img src="images/pg1_03.png" class="pg1_03">
+            <img src="images/pg1_02.png" class="pg1_02">
+            <img src="images/pg1_01.png" class="pg1_01">
+        </div>
+        <!-- <img src="images/pg1_next.png" class="pg1_next"> -->
+        <img src="images/pg1_04.png" class="pg1_04 btn_next">
+        <img src="images/pg1_05.png" class="pg1_05 btn_next">
+    </div>
+    <div class="page page2 hide">
+        <img src="./images/sfw.png" class="sfw">
+        <div class="content">
+        <!-- onchange="selectFileImage(this);" -->
+            <input type="file" class="upload" accept="image/*" name="" id="uploadImage" 
+            onchange="selectFileImage(this);">
+        </div>
+        <img id="source" src="" class="source hide" alt="source">
+        <!-- <img src="images/pg0_01.png" alt="pg0_01" class="pg0_01"> -->
+    </div>
+    <div class="pagecj hide">
+        <img src="./images/pagecj_tips.png" class="pagecj_tips">
+        <!-- <div class="cjbg"></div> -->
+        <img id="cjbg" src="images/pgcj_01.png" alt="pgcj_bg" class="pagecj_bg">
+        <img id="pian" src="" class="pian hide" alt="裁剪后的小图">
+        <img src="./images/saveTips.png" class="saveTips hide">
+        <img src="./images/icon_btn1.png" class="icon_btn1 fudong1">
+        <img src="./images/icon_btn2.png" class="icon_btn2 fudong1">
+    </div>
+    <div class="page page3">
+        <!-- <img src="./images/pg3_01.png" class="pg3_01"> -->
+        <div class="pg3_sfw">
+            <canvas id="gifcanvas" class="hide" width="800" height="680"></canvas>
+            <div class="content">
+                <img src="" id="result" class="result">
+            </div>
+            <!-- shakMove -->
+            <img src="./images/pgcj_hand.png" class="pgcj_hand">
+            <img src="./images/pg3_save.png" class="pg3_save">
+        </div>
+    </div>
+    <div class="loading" style="display: none">
+        <div class="loader-inner ball-pulse" style="float: left">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span style="color: white;margin-left: 5px">处理中...</span>
+    </div>
+<!-- </div> -->
+<script type="text/javascript" src="js/slide.js"></script>
+<script src="./js/gif.js"></script>
+<script src="./js/gif.worker.js"></script>
+<!-- <script src="js/validate.js" type="text/javascript"></script> -->
+</body>
+</html>
